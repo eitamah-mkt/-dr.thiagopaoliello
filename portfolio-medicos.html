@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Dr. Thiago Paoliello x Hangar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #021F33;
+            font-family: 'Inter', sans-serif;
+            color: #FFFFFF;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            color: #FFFFFF;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.6);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        .subtitle a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        .subtitle a:hover {
+            color: #FFFFFF;
+            border-bottom-color: rgba(255,255,255,0.6);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 28px;
+            margin: 40px 0;
+        }
+        .card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.05);
+        }
+        .card-icon {
+            padding: 28px 24px 16px 24px;
+            font-size: 32px;
+            color: rgba(255,255,255,0.5);
+        }
+        .card-content {
+            padding: 0 24px 24px 24px;
+        }
+        .card-content h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            letter-spacing: -0.2px;
+        }
+        .card-content p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.5;
+        }
+        .procedure-tag {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 12px;
+            width: 100%;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 40px 0 20px 0;
+            letter-spacing: -0.2px;
+            border-left: 2px solid rgba(255,255,255,0.3);
+            padding-left: 16px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 26px; }
+            .subtitle { font-size: 14px; }
+            .grid { gap: 20px; }
+            .card-icon { padding: 24px 20px 12px 20px; }
+            .card-content { padding: 0 20px 20px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+            <h1>Portfólio de Conteúdo para Medicina</h1>
+            <p class="subtitle">
+                Materiais desenvolvidos pela <strong>Hangar Creative Hub</strong> para 
+                <a href="https://drthiagopaoliello.com/" target="_blank" rel="noopener noreferrer">Dr. Thiago Paoliello</a> 
+                e referências para a clínica
+            </p>
+        </div>
+
+        <!-- Procedimentos do Dr. Thiago (baseado no site dele) -->
+        <div class="section-title">Procedimentos em destaque</div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-cut"></i></div>
+                <div class="card-content">
+                    <h3>Lipoaspiração de Alta Definição</h3>
+                    <p>Especialidade do Dr. Thiago. Conteúdo técnico mostrando resultado natural e segurança do procedimento.</p>
+                    <div class="procedure-tag">conteúdo: vídeos institucionais + antes/depois</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-female"></i></div>
+                <div class="card-content">
+                    <h3>Mamoplastia</h3>
+                    <p>Cirurgia de aumento/redução com cicatrizes reduzidas. Estratégia de conteúdo focada em confiança e autoestima.</p>
+                    <div class="procedure-tag">conteúdo: stories + posts educativos</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-belly"></i></div>
+                <div class="card-content">
+                    <h3>Abdominoplastia e Contorno Corporal</h3>
+                    <p>Para pacientes que necessitam retirada de excesso de pele. Produção de material didático sobre pós-operatório.</p>
+                    <div class="procedure-tag">conteúdo: e-book + carrossel informativo</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-eye"></i></div>
+                <div class="card-content">
+                    <h3>Blefaroplastia</h3>
+                    <p>Cirurgia de pálpebras. Conteúdo técnico com linguagem acessível para pacientes.</p>
+                    <div class="procedure-tag">conteúdo: série de 3 posts + vídeo curto</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-heartbeat"></i></div>
+                <div class="card-content">
+                    <h3>Pós-operatório e Acompanhamento</h3>
+                    <p>Diferencial da clínica: equipe dedicada e acompanhamento detalhado.</p>
+                    <div class="procedure-tag">conteúdo: depoimentos + checklist pós-op</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <div class="card-content">
+                    <h3>Estrutura da Clínica</h3>
+                    <p>Localizada na melhor região de SP, ambiente acolhedor e seguro.</p>
+                    <div class="procedure-tag">conteúdo: tour 360° + fotografia profissional</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdos estratégicos para a marca -->
+        <div class="section-title">Conteúdos estratégicos</div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="card-content">
+                    <h3>Estratégia de Posicionamento Premium</h3>
+                    <p>Planejamento de conteúdo para posicionar o Dr. Thiago como referência em contorno corporal em São Paulo.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-camera"></i></div>
+                <div class="card-content">
+                    <h3>Ensaios Fotográficos Profissionais</h3>
+                    <p>Fotografia de alta qualidade para consultório, materiais institucionais e redes sociais.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                <div class="card-content">
+                    <h3>Gestão de Redes Sociais</h3>
+                    <p>Conteúdo educativo, humanização e autoridade médica com linguagem consistente.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+                <div class="card-content">
+                    <h3>Materiais para Captação de Pacientes</h3>
+                    <p>E-books, checklists e materiais ricos para conversão em pacientes de alto padrão.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Credenciais do Dr. Thiago (alinhado com o site) -->
+        <div style="margin: 40px 0 20px; padding: 24px; background: rgba(255,255,255,0.02); border-radius: 20px; border: 1px solid rgba(255,255,255,0.06); text-align: center;">
+            <p style="font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 8px; letter-spacing: 0.5px;">ESPECIALISTA PELA SBCP | CFM</p>
+            <p style="font-size: 13px; color: rgba(255,255,255,0.7);">CRM-SP 136.535 | RQE 114.388</p>
+            <p style="font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 12px;">+10 anos de experiência | Residência em Cirurgia Geral e Plástica</p>
+        </div>
+
+        <div class="footer">
+            <p>© Hangar Creative Hub | Conteúdo estratégico para Dr. Thiago Paoliello</p>
+        </div>
+    </div>
+</body>
+</html>

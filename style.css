@@ -1,0 +1,387 @@
+/* RESET E BASE - MINIMALISTA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #021F33;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* TEXTURA SUTIL NO FUNDO */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* CONTROLES DE IDIOMA - MINIMALISTA */
+.controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.language-selector {
+    display: flex;
+    gap: 6px;
+}
+
+.lang-btn {
+    width: 32px;
+    height: 22px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.lang-btn:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.lang-btn.active {
+    border-color: #FFFFFF;
+}
+
+.flag-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    max-width: 520px;
+    width: 100%;
+    padding: 40px 25px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* CONTEÚDO POR IDIOMA */
+.language-content {
+    display: none;
+}
+
+.language-content.active {
+    display: block;
+    animation: contentFadeIn 0.6s ease forwards;
+}
+
+@keyframes contentFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FOTO DO CLIENTE - TAMANHO AUMENTADO */
+.logo-area {
+    margin-bottom: 28px;
+}
+
+.clinic-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.clinic-photo:hover {
+    transform: scale(1.02);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.doctor-name {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+
+.doctor-title {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.doctor-crm {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 400;
+}
+
+/* INFORMAÇÕES DA CLÍNICA */
+.clinic-info {
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.clinic-name {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+
+.clinic-specialty {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: lowercase;
+    margin-bottom: 8px;
+}
+
+.clinical-director {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 2px;
+}
+
+.clinical-director-crm {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* BOTÕES */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    height: 48px;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+.link-button:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateY(-1px);
+}
+
+.link-button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.link-button i {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.button-text {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ÁREA DE AGENDAMENTO */
+.booking-area {
+    margin: 20px 0 24px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.booking-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+}
+
+.booking-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    padding: 6px 16px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.booking-link i {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.booking-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ASSINATURA HANGAR COM LINK */
+.signature {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+}
+
+.hangar-link {
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.hangar-link:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===================== */
+/* ANIMAÇÃO DE LOADING - MINIMALISTA */
+/* ===================== */
+
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #021F33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-loader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-spinner {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.loader-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    border-top-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: spin 0.8s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .clinic-photo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 16px;
+    }
+    
+    .doctor-name {
+        font-size: 18px;
+    }
+    
+    .link-button {
+        height: 44px;
+    }
+    
+    .button-text {
+        font-size: 13px;
+    }
+    
+    .controls {
+        top: 12px;
+        right: 12px;
+        padding: 5px;
+    }
+    
+    .lang-btn {
+        width: 28px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .clinic-photo {
+        width: 88px;
+        height: 88px;
+    }
+    
+    .button-text {
+        font-size: 12px;
+    }
+    
+    .link-button i {
+        font-size: 13px;
+    }
+}
