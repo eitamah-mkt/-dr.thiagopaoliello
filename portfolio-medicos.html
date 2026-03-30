@@ -12,262 +12,328 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
             background: #FAF9F8;
             font-family: 'Inter', sans-serif;
             color: #021F33;
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 40px 24px;
         }
+        
         .container {
-            max-width: 1200px;
+            max-width: 500px;
+            width: 100%;
             margin: 0 auto;
         }
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+        
+        /* Back link */
         .back-link {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             color: rgba(2, 31, 51, 0.5);
             text-decoration: none;
-            margin-bottom: 20px;
-            transition: all 0.3s;
+            margin-bottom: 32px;
+            font-size: 14px;
+            transition: color 0.2s;
         }
+        
         .back-link:hover {
             color: #021F33;
         }
-        h1 {
-            font-size: 32px;
+        
+        /* Perfil duplo - Hangar × Paoliello */
+        .partners-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .partner {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        /* Hangar logo - SEM MOLDURA, retangular */
+        .hangar-logo {
+            width: 110px;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        
+        /* Paoliello foto - redonda */
+        .paoliello-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(2, 31, 51, 0.15);
+            margin-bottom: 10px;
+        }
+        
+        .partner-name {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            color: #021F33;
+            margin-bottom: 4px;
+        }
+        
+        .partner-title {
+            font-size: 10px;
+            color: rgba(2, 31, 51, 0.6);
+        }
+        
+        .divider-symbol {
+            font-size: 20px;
+            color: rgba(2, 31, 51, 0.25);
+            font-weight: 300;
+        }
+        
+        /* Título */
+        .page-title {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .page-title h1 {
+            font-size: 24px;
             font-weight: 500;
-            margin-bottom: 12px;
             letter-spacing: -0.3px;
             color: #021F33;
+            margin-bottom: 8px;
         }
-        .subtitle {
-            font-size: 16px;
+        
+        .page-title p {
+            font-size: 13px;
             color: rgba(2, 31, 51, 0.6);
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.5;
         }
-        .subtitle a {
-            color: #021F33;
-            text-decoration: none;
-            border-bottom: 1px solid rgba(2, 31, 51, 0.3);
-        }
-        .subtitle a:hover {
-            border-bottom-color: #021F33;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 28px;
-            margin: 40px 0;
-        }
-        .card {
-            background: rgba(2, 31, 51, 0.02);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+        
+        /* Moldura do vídeo - VERTICAL */
+        .video-frame {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
             border: 1px solid rgba(2, 31, 51, 0.08);
         }
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(2, 31, 51, 0.15);
-            background: rgba(2, 31, 51, 0.04);
-        }
-        .card-icon {
-            padding: 28px 24px 16px 24px;
-            font-size: 32px;
-            color: #021F33;
-            opacity: 0.6;
-        }
-        .card-content {
-            padding: 0 24px 24px 24px;
-        }
-        .card-content h3 {
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 10px;
-            letter-spacing: -0.2px;
-            color: #021F33;
-        }
-        .card-content p {
-            font-size: 13px;
-            color: rgba(2, 31, 51, 0.6);
-            line-height: 1.5;
-        }
-        .procedure-tag {
-            display: inline-block;
-            margin-top: 12px;
-            font-size: 11px;
-            color: rgba(2, 31, 51, 0.45);
-            border-top: 1px solid rgba(2, 31, 51, 0.1);
-            padding-top: 12px;
+        
+        .video-container {
+            position: relative;
             width: 100%;
-        }
-        .section-title {
-            font-size: 20px;
-            font-weight: 500;
-            margin: 40px 0 20px 0;
-            letter-spacing: -0.2px;
-            border-left: 2px solid #021F33;
-            padding-left: 16px;
-            color: #021F33;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(2, 31, 51, 0.08);
-            font-size: 12px;
-            color: rgba(2, 31, 51, 0.4);
-        }
-        .credential-box {
-            margin: 40px 0 20px;
-            padding: 24px;
-            background: rgba(2, 31, 51, 0.02);
+            padding-bottom: 177.78%; /* Proporção 9:16 (vertical) */
+            background: #000;
             border-radius: 20px;
-            border: 1px solid rgba(2, 31, 51, 0.06);
+            overflow: hidden;
+        }
+        
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Controles */
+        .video-controls {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .play-btn {
+            background: rgba(2, 31, 51, 0.08);
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            color: #021F33;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .play-btn:hover {
+            background: rgba(2, 31, 51, 0.15);
+            transform: scale(1.05);
+        }
+        
+        /* FOOTER PADRONIZADO */
+        .footer {
+            margin-top: 48px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(2, 31, 51, 0.1);
             text-align: center;
         }
-        .credential-box p {
-            color: rgba(2, 31, 51, 0.6);
-        }
-        .credential-box .specialty {
-            font-size: 12px;
+        
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            font-size: 11px;
             color: rgba(2, 31, 51, 0.5);
-            margin-bottom: 8px;
-            letter-spacing: 0.5px;
         }
-        .credential-box .crm {
-            font-size: 13px;
+        
+        .footer-logo {
+            width: 24px;
+            height: auto;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        
+        .footer-logo:hover {
+            opacity: 1;
+        }
+        
+        .footer-link {
+            color: rgba(2, 31, 51, 0.6);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .footer-link:hover {
             color: #021F33;
+            text-decoration: underline;
         }
-        .credential-box .exp {
-            font-size: 12px;
-            color: rgba(2, 31, 51, 0.45);
-            margin-top: 12px;
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 26px; }
-            .subtitle { font-size: 14px; }
-            .grid { gap: 20px; }
-            .card-icon { padding: 24px 20px 12px 20px; }
-            .card-content { padding: 0 20px 20px 20px; }
+        
+        @media (max-width: 550px) {
+            body {
+                padding: 20px 16px;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+            
+            .partners-header {
+                gap: 16px;
+            }
+            
+            .hangar-logo {
+                width: 90px;
+            }
+            
+            .paoliello-photo {
+                width: 75px;
+                height: 75px;
+            }
+            
+            .partner-name {
+                font-size: 12px;
+            }
+            
+            .page-title h1 {
+                font-size: 20px;
+            }
+            
+            .video-frame {
+                padding: 12px;
+                border-radius: 20px;
+            }
+            
+            .video-container {
+                border-radius: 14px;
+            }
+            
+            .play-btn {
+                width: 42px;
+                height: 42px;
+                font-size: 16px;
+            }
+            
+            .footer-logo {
+                width: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <a href="index.html" class="back-link">
-                <i class="fas fa-arrow-left"></i> Voltar
-            </a>
-            <h1>Portfólio de Conteúdo para Medicina</h1>
-            <p class="subtitle">
-                Materiais desenvolvidos pela <strong>Hangar Creative Hub</strong> para 
-                <a href="https://drthiagopaoliello.com/" target="_blank" rel="noopener noreferrer">Dr. Thiago Paoliello</a> 
-                e referências para a clínica
-            </p>
-        </div>
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
 
-        <div class="section-title">Procedimentos em destaque</div>
-        <div class="grid">
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-cut"></i></div>
-                <div class="card-content">
-                    <h3>Lipoaspiração de Alta Definição</h3>
-                    <p>Especialidade do Dr. Thiago. Conteúdo técnico mostrando resultado natural e segurança do procedimento.</p>
-                    <div class="procedure-tag">conteúdo: vídeos institucionais + antes/depois</div>
-                </div>
+        <!-- PERFIS LADO A LADO -->
+        <div class="partners-header">
+            <div class="partner">
+                <img src="images/perfil2.png" alt="Hangar Creative Hub" class="hangar-logo">
+                <div class="partner-name">Hangar Creative Hub</div>
+                <div class="partner-title">estratégia · criação · performance</div>
             </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-female"></i></div>
-                <div class="card-content">
-                    <h3>Mamoplastia</h3>
-                    <p>Cirurgia de aumento/redução com cicatrizes reduzidas. Estratégia de conteúdo focada em confiança e autoestima.</p>
-                    <div class="procedure-tag">conteúdo: stories + posts educativos</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-belly"></i></div>
-                <div class="card-content">
-                    <h3>Abdominoplastia e Contorno Corporal</h3>
-                    <p>Para pacientes que necessitam retirada de excesso de pele. Produção de material didático sobre pós-operatório.</p>
-                    <div class="procedure-tag">conteúdo: e-book + carrossel informativo</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-eye"></i></div>
-                <div class="card-content">
-                    <h3>Blefaroplastia</h3>
-                    <p>Cirurgia de pálpebras. Conteúdo técnico com linguagem acessível para pacientes.</p>
-                    <div class="procedure-tag">conteúdo: série de 3 posts + vídeo curto</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-heartbeat"></i></div>
-                <div class="card-content">
-                    <h3>Pós-operatório e Acompanhamento</h3>
-                    <p>Diferencial da clínica: equipe dedicada e acompanhamento detalhado.</p>
-                    <div class="procedure-tag">conteúdo: depoimentos + checklist pós-op</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-building"></i></div>
-                <div class="card-content">
-                    <h3>Estrutura da Clínica</h3>
-                    <p>Localizada na melhor região de SP, ambiente acolhedor e seguro.</p>
-                    <div class="procedure-tag">conteúdo: tour 360° + fotografia profissional</div>
-                </div>
+            <span class="divider-symbol">×</span>
+            <div class="partner">
+                <img src="images/perfil.jpg" alt="Dr. Thiago Paoliello" class="paoliello-photo">
+                <div class="partner-name">Paoliello Clinic</div>
+                <div class="partner-title">Dr. Thiago Paoliello | Cirurgia Plástica</div>
             </div>
         </div>
-
-        <div class="section-title">Conteúdos estratégicos</div>
-        <div class="grid">
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-                <div class="card-content">
-                    <h3>Estratégia de Posicionamento Premium</h3>
-                    <p>Planejamento de conteúdo para posicionar o Dr. Thiago como referência em contorno corporal em São Paulo.</p>
-                </div>
+        
+        <div class="page-title">
+            <h1>Portfólio Medicina / Saúde</h1>
+            <p>Conteúdo exclusivo desenvolvido para Dr. Thiago Paoliello</p>
+        </div>
+        
+        <!-- Moldura com vídeo VERTICAL -->
+        <div class="video-frame">
+            <div class="video-container">
+                <video id="portfolioVideo" poster="images/video-thumb.jpg">
+                    <source src="portifolio/medico.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
             </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-camera"></i></div>
-                <div class="card-content">
-                    <h3>Ensaios Fotográficos Profissionais</h3>
-                    <p>Fotografia de alta qualidade para consultório, materiais institucionais e redes sociais.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
-                <div class="card-content">
-                    <h3>Gestão de Redes Sociais</h3>
-                    <p>Conteúdo educativo, humanização e autoridade médica com linguagem consistente.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-file-alt"></i></div>
-                <div class="card-content">
-                    <h3>Materiais para Captação de Pacientes</h3>
-                    <p>E-books, checklists e materiais ricos para conversão em pacientes de alto padrão.</p>
-                </div>
+            <div class="video-controls">
+                <button class="play-btn" id="playPauseBtn">
+                    <i class="fas fa-play"></i>
+                </button>
             </div>
         </div>
-
-        <div class="credential-box">
-            <p class="specialty">ESPECIALISTA PELA SBCP | CFM</p>
-            <p class="crm">CRM-SP 136.535 | RQE 114.388</p>
-            <p class="exp">+10 anos de experiência | Residência em Cirurgia Geral e Plástica</p>
-        </div>
-
+        
+        <!-- FOOTER PADRONIZADO -->
         <div class="footer">
-            <p>© Hangar Creative Hub | Conteúdo estratégico para Dr. Thiago Paoliello</p>
+            <div class="footer-content">
+                <img src="images/perfil2.png" alt="Hangar" class="footer-logo">
+                <span>Powered by</span>
+                <a href="https://www.hangarcreativehub.com/" target="_blank" rel="noopener noreferrer" class="footer-link">HANGAR CREATIVE HUB</a>
+            </div>
         </div>
     </div>
+    
+    <script>
+        const video = document.getElementById('portfolioVideo');
+        const playBtn = document.getElementById('playPauseBtn');
+        const playIcon = playBtn.querySelector('i');
+        
+        playBtn.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                playIcon.classList.remove('fa-play');
+                playIcon.classList.add('fa-pause');
+            } else {
+                video.pause();
+                playIcon.classList.remove('fa-pause');
+                playIcon.classList.add('fa-play');
+            }
+        });
+        
+        video.addEventListener('ended', () => {
+            playIcon.classList.remove('fa-pause');
+            playIcon.classList.add('fa-play');
+        });
+    </script>
 </body>
 </html>

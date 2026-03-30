@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposta de Valor | Hangar x Dr. Thiago</title>
+    <title>Proposta de Valor | Hangar × Paoliello Clinic</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -12,112 +12,368 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
             background: #FAF9F8;
             font-family: 'Inter', sans-serif;
-            color: #021F33;
+            color: #1a2a3a;
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 40px 24px;
         }
+        
         .container {
             max-width: 800px;
+            width: 100%;
             margin: 0 auto;
         }
+        
+        /* Back link */
         .back-link {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: rgba(2, 31, 51, 0.5);
+            color: rgba(26, 42, 58, 0.5);
             text-decoration: none;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
             font-size: 14px;
             transition: color 0.2s;
         }
+        
         .back-link:hover {
-            color: #021F33;
+            color: #1a2a3a;
         }
+        
+        /* Header com perfis lado a lado */
+        .partners-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+        
+        .partner {
+            text-align: center;
+            flex: 1;
+            min-width: 160px;
+        }
+        
+        /* Hangar logo - SEM MOLDURA, retangular */
+        .hangar-logo {
+            width: 140px;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+        
+        /* Paoliello foto - redonda */
+        .paoliello-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(26, 42, 58, 0.15);
+            margin-bottom: 12px;
+        }
+        
+        .partner-name {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            color: #1a2a3a;
+            margin-bottom: 4px;
+        }
+        
+        .partner-title {
+            font-size: 11px;
+            color: rgba(26, 42, 58, 0.6);
+        }
+        
+        .divider-symbol {
+            font-size: 24px;
+            color: rgba(26, 42, 58, 0.25);
+            font-weight: 300;
+        }
+        
+        /* Títulos */
         h1 {
             font-size: 32px;
             font-weight: 500;
+            letter-spacing: -0.5px;
+            color: #1a2a3a;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        
+        /* Bloco de texto principal */
+        .intro-text {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+        
+        .intro-text p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: rgba(26, 42, 58, 0.75);
             margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        /* Pilares - Layout VERTICAL (um por linha) */
+        .pillars-title {
+            font-size: 26px;
+            font-weight: 500;
+            text-align: center;
+            margin: 48px 0 32px 0;
             letter-spacing: -0.3px;
-            color: #021F33;
         }
-        .subtitle {
-            font-size: 16px;
-            color: rgba(2, 31, 51, 0.6);
-            line-height: 1.5;
-            margin-bottom: 48px;
-            border-left: 2px solid rgba(2, 31, 51, 0.2);
-            padding-left: 20px;
-        }
-        .card {
-            background: rgba(2, 31, 51, 0.02);
-            border: 1px solid rgba(2, 31, 51, 0.08);
+        
+        .pilar-card {
+            background: #ffffff;
             border-radius: 24px;
-            padding: 28px;
-            margin-bottom: 24px;
-            transition: all 0.2s ease;
+            padding: 32px;
+            margin-bottom: 28px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(26, 42, 58, 0.08);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
         }
-        .card:hover {
-            border-color: rgba(2, 31, 51, 0.15);
-            background: rgba(2, 31, 51, 0.04);
+        
+        .pilar-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(26, 42, 58, 0.15);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
         }
-        .card-header {
+        
+        .pilar-header {
             display: flex;
             align-items: center;
-            gap: 14px;
-            margin-bottom: 16px;
+            gap: 16px;
+            margin-bottom: 20px;
         }
-        .card-icon {
-            width: 44px;
-            height: 44px;
-            background: rgba(2, 31, 51, 0.06);
-            border-radius: 50%;
+        
+        .pilar-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(26, 42, 58, 0.05);
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            color: #021F33;
         }
-        .card h2 {
-            font-size: 20px;
-            font-weight: 500;
-            letter-spacing: -0.2px;
-            color: #021F33;
+        
+        .pilar-icon i {
+            font-size: 26px;
+            color: #1a2a3a;
         }
-        .card p {
-            font-size: 14px;
-            color: rgba(2, 31, 51, 0.65);
-            line-height: 1.5;
-            margin-left: 58px;
+        
+        .pilar-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: #1a2a3a;
         }
-        .highlight {
-            background: rgba(2, 31, 51, 0.03);
-            border-left: 3px solid #021F33;
-            padding: 20px 24px;
-            margin: 32px 0 24px;
+        
+        .pilar-card p {
+            font-size: 15px;
+            line-height: 1.55;
+            color: rgba(26, 42, 58, 0.7);
+            margin-bottom: 24px;
+        }
+        
+        /* Galeria de imagens - MAIORES */
+        .image-gallery {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        
+        .gallery-item {
+            flex: 1;
+            min-width: 140px;
+            background: #f5f3f0;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 4 / 3;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.03);
+        }
+        
+        /* Highlight blocks */
+        .highlight-block {
+            background: rgba(26, 42, 58, 0.02);
+            border-left: 3px solid #1a2a3a;
+            padding: 24px 28px;
+            margin: 32px 0;
             border-radius: 16px;
         }
-        .highlight p {
-            font-size: 14px;
-            color: #021F33;
-            line-height: 1.5;
+        
+        .highlight-block p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #1a2a3a;
         }
+        
+        .highlight-block strong {
+            font-weight: 600;
+        }
+        
+        .vision-block {
+            text-align: center;
+            padding: 40px 28px;
+            background: #ffffff;
+            border-radius: 24px;
+            margin: 40px 0 32px;
+            border: 1px solid rgba(26, 42, 58, 0.08);
+        }
+        
+        .vision-block p {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            color: #1a2a3a;
+            line-height: 1.4;
+        }
+        
+        /* FOOTER PADRONIZADO */
         .footer {
             margin-top: 48px;
             padding-top: 24px;
-            border-top: 1px solid rgba(2, 31, 51, 0.08);
+            border-top: 1px solid rgba(26, 42, 58, 0.1);
             text-align: center;
-            font-size: 12px;
-            color: rgba(2, 31, 51, 0.4);
         }
-        @media (max-width: 600px) {
-            h1 { font-size: 26px; }
-            .card { padding: 20px; }
-            .card p { margin-left: 0; margin-top: 12px; }
-            .card-header { flex-wrap: wrap; }
-            .subtitle { font-size: 14px; }
+        
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: rgba(26, 42, 58, 0.5);
+        }
+        
+        .footer-logo {
+            width: 26px;
+            height: auto;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        
+        .footer-logo:hover {
+            opacity: 1;
+        }
+        
+        .footer-link {
+            color: rgba(26, 42, 58, 0.6);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .footer-link:hover {
+            color: #1a2a3a;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 680px) {
+            body {
+                padding: 24px 16px;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            .partners-header {
+                gap: 16px;
+            }
+            
+            .hangar-logo {
+                width: 100px;
+            }
+            
+            .paoliello-photo {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .partner-name {
+                font-size: 13px;
+            }
+            
+            .pilar-card {
+                padding: 24px;
+            }
+            
+            .pilar-icon {
+                width: 48px;
+                height: 48px;
+            }
+            
+            .pilar-icon i {
+                font-size: 22px;
+            }
+            
+            .pilar-card h3 {
+                font-size: 20px;
+            }
+            
+            .pilar-card p {
+                font-size: 14px;
+            }
+            
+            .image-gallery {
+                gap: 12px;
+            }
+            
+            .gallery-item {
+                min-width: calc(33% - 8px);
+            }
+            
+            .highlight-block {
+                padding: 20px;
+            }
+            
+            .vision-block p {
+                font-size: 16px;
+            }
+            
+            .footer-logo {
+                width: 22px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .image-gallery {
+                flex-direction: column;
+            }
+            
+            .gallery-item {
+                min-width: 100%;
+                aspect-ratio: 16 / 9;
+            }
         }
     </style>
 </head>
@@ -127,49 +383,165 @@
             <i class="fas fa-arrow-left"></i> Voltar
         </a>
 
+        <!-- PERFIS LADO A LADO -->
+        <div class="partners-header">
+            <div class="partner">
+                <img src="images/perfil2.png" alt="Hangar Creative Hub" class="hangar-logo">
+                <div class="partner-name">Hangar Creative Hub</div>
+                <div class="partner-title">estratégia · criação · performance</div>
+            </div>
+            <span class="divider-symbol">×</span>
+            <div class="partner">
+                <img src="images/perfil.jpg" alt="Dr. Thiago Paoliello" class="paoliello-photo">
+                <div class="partner-name">Paoliello Clinic</div>
+                <div class="partner-title">Dr. Thiago Paoliello | Cirurgia Plástica</div>
+            </div>
+        </div>
+
         <h1>Proposta de Valor</h1>
-        <div class="subtitle">
-            Por que a Hangar Creative Hub é a parceira estratégica que o Dr. Thiago Paoliello precisa para consolidar sua autoridade e escalar sua presença digital.
+        
+        <!-- TEXTO DE ABERTURA -->
+        <div class="intro-text">
+            <p>A Hangar Comunicação nasce com um olhar contemporâneo sobre presença, narrativa e percepção. Mais do que produzir conteúdo, nosso papel é construir relevância, autoridade e memória de marca.</p>
+            <p>Ao nos conectarmos com a Paoliello Clinic, enxergamos um potencial que vai além da comunicação tradicional: existe aqui uma história forte, uma estética própria e uma autoridade que merece ser percebida com a mesma precisão com que é construída no atendimento.</p>
+            <p>Nosso objetivo é atuar de forma estratégica e integrada, elevando a percepção da marca por meio de uma comunicação refinada, sensível e inteligente.</p>
         </div>
 
-        <div class="card">
-            <div class="card-header">
-                <div class="card-icon"><i class="fas fa-gem"></i></div>
-                <h2>Exclusividade e Personalização</h2>
+        <!-- TÍTULO DOS PILARES -->
+        <div class="pillars-title">6 Pilares Estratégicos</div>
+        
+        <!-- PILAR 1: Jornalismo Digital COM IMAGENS -->
+        <div class="pilar-card">
+            <div class="pilar-header">
+                <div class="pilar-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <h3>Jornalismo digital</h3>
             </div>
-            <p>Não tratamos clientes como números. Cada estratégia é desenhada sob medida para a sua especialidade, seu posicionamento e seus pacientes. O que criamos para você não será replicado para outro profissional.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <div class="card-icon"><i class="fas fa-brain"></i></div>
-                <h2>Estratégia com Base em Autoridade Médica</h2>
+            <p>Construção de narrativa com profundidade, verdade e posicionamento. Conteúdo que informa, educa e cria conexão real com o público.</p>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="images/foto1.jpeg" alt="Foto 1" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+1'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/foto2.jpeg" alt="Foto 2" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+2'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/foto3.jpeg" alt="Foto 3" onerror="this.src='https://placehold.co/450x600/e9ecef/1a2a3a?text=Foto+3'">
+                </div>
             </div>
-            <p>Conteúdo técnico com linguagem acessível, respeitando o rigor da medicina e construindo confiança com pacientes de alto padrão. Não trabalhamos com "modinhas" — trabalhamos com posicionamento consistente.</p>
         </div>
-
-        <div class="card">
-            <div class="card-header">
-                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-                <h2>Resultados que Transformam Negócios</h2>
+        
+        <!-- PILAR 2: Design estratégico COM IMAGENS -->
+        <div class="pilar-card">
+            <div class="pilar-header">
+                <div class="pilar-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Design estratégico</h3>
             </div>
-            <p>Mais do que visual bonito, entregamos aumento de reconhecimento, captação de pacientes qualificados e fortalecimento da marca Paoliello Clinic no mercado da saúde premium.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <div class="card-icon"><i class="fas fa-handshake"></i></div>
-                <h2>Parceria de Longo Prazo</h2>
+            <p>Direcionamento estético alinhado à sofisticação da marca, garantindo consistência visual e reconhecimento.</p>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="images/foto4.jpeg" alt="Foto 4" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+4'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/foto5.jpeg" alt="Foto 5" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+5'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/foto6.jpeg" alt="Foto 6" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+6'">
+                </div>
             </div>
-            <p>Acompanhamos resultados, ajustamos rotas e crescemos junto. Nosso compromisso é com o seu legado, não com entregas pontuais.</p>
         </div>
-
-        <div class="highlight">
-            <p><strong>➕ Diferencial Hangar:</strong> Somos uma agência que une comunicação, tecnologia e criatividade. Entregamos uma arquitetura de presença digital que posiciona você como referência em contorno corporal em São Paulo.</p>
+        
+        <!-- PILAR 3: Fotografia COM IMAGENS -->
+        <div class="pilar-card">
+            <div class="pilar-header">
+                <div class="pilar-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h3>Fotografia</h3>
+            </div>
+            <p>Captação de imagens que traduzem não apenas o espaço e os procedimentos, mas a experiência, o cuidado e a identidade da clínica.</p>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="images/foto7.jpeg" alt="Foto 7" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+7'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/foto8.jpeg" alt="Foto 8" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+8'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/foto9.jpeg" alt="Foto 9" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+9'">
+                </div>
+            </div>
         </div>
-
+        
+        <!-- PILAR 4: Audiovisual COM IMAGENS -->
+        <div class="pilar-card">
+            <div class="pilar-header">
+                <div class="pilar-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>Audiovisual</h3>
+            </div>
+            <p>Produção de vídeos com linguagem contemporânea, capazes de gerar autoridade, desejo e proximidade.</p>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="images/foto10.jpeg" alt="Foto 10" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+10'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/foto11.jpeg" alt="Foto 11" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+11'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/foto12.jpeg" alt="Foto 12" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+12'">
+                </div>
+            </div>
+        </div>
+        
+        <!-- PILAR 5: Marketing Estratégico (sem imagens) -->
+        <div class="pilar-card">
+            <div class="pilar-header">
+                <div class="pilar-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Marketing Estratégico</h3>
+            </div>
+            <p>Planejamento e direcionamento de comunicação com foco em crescimento sustentável, posicionamento de marca e diferenciação no mercado.</p>
+        </div>
+        
+        <!-- PILAR 6: Performance e Tráfego Pago (sem imagens) -->
+        <div class="pilar-card">
+            <div class="pilar-header">
+                <div class="pilar-icon">
+                    <i class="fas fa-chart-simple"></i>
+                </div>
+                <h3>Performance e Tráfego Pago</h3>
+            </div>
+            <p>Estruturação e gestão de campanhas com foco em alcance qualificado, atração de novos pacientes e conversão. Atuamos com inteligência de dados para otimizar resultados, escalar o que funciona e transformar visibilidade em retorno real.</p>
+        </div>
+        
+        <!-- TEXTO DO MEIO -->
+        <div class="highlight-block">
+            <p>Mais do que executar, nosso intuito é criar uma história juntos. Uma narrativa contínua, construída com intenção, onde cada imagem, cada palavra e cada detalhe contribuem para consolidar a Paoliello Clinic como referência não apenas em seu segmento, mas também em presença, percepção e posicionamento.</p>
+        </div>
+        
+        <!-- NOSSO DIRECIONAMENTO -->
+        <div class="highlight-block">
+            <p><strong>Nosso direcionamento:</strong> Mais do que executar, nosso intuito é criar uma história juntos. Uma construção contínua, onde cada ponto de contato — do conteúdo ao anúncio — é pensado estrategicamente para fortalecer a marca, gerar valor e consolidar a Paoliello Clinic como referência em seu segmento. Acreditamos em uma comunicação que une estética, inteligência e resultado. Que não apenas posiciona, mas sustenta crescimento.</p>
+        </div>
+        
+        <!-- VISÃO FINAL -->
+        <div class="vision-block">
+            <p>Transformar presença em autoridade.<br>Autoridade em desejo.<br>Desejo em conversão.</p>
+        </div>
+        
+        <!-- FOOTER PADRONIZADO -->
         <div class="footer">
-            <p>HANGAR CREATIVE HUB · Estratégia e criação para profissionais da saúde</p>
+            <div class="footer-content">
+                <img src="images/perfil2.png" alt="Hangar" class="footer-logo">
+                <span>Powered by</span>
+                <a href="https://www.hangarcreativehub.com/" target="_blank" rel="noopener noreferrer" class="footer-link">HANGAR CREATIVE HUB</a>
+            </div>
         </div>
     </div>
 </body>

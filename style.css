@@ -244,25 +244,44 @@ body::before {
     color: #25D366;
 }
 
-/* ASSINATURA HANGAR */
-.signature {
-    margin-top: 16px;
-    padding-top: 16px;
+/* FOOTER PADRONIZADO */
+.footer {
+    margin-top: 28px;
+    padding-top: 20px;
     border-top: 1px solid rgba(2, 31, 51, 0.1);
-    text-align: center;
 }
 
-.hangar-link {
-    font-size: 9px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: rgba(2, 31, 51, 0.4);
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 11px;
+    color: rgba(2, 31, 51, 0.5);
+}
+
+.footer-logo {
+    width: 22px;
+    height: auto;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.footer-logo:hover {
+    opacity: 1;
+}
+
+.footer-link {
+    color: rgba(2, 31, 51, 0.6);
     text-decoration: none;
-    transition: all 0.2s ease;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
-.hangar-link:hover {
+.footer-link:hover {
     color: #021F33;
+    text-decoration: underline;
 }
 
 /* ===================== */
@@ -345,6 +364,15 @@ body::before {
     .lang-btn {
         width: 28px;
         height: 20px;
+    }
+    
+    .footer-logo {
+        width: 18px;
+    }
+    
+    .footer-content {
+        font-size: 10px;
+        gap: 6px;
     }
 }
 
