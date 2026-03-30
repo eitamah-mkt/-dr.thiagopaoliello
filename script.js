@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let isAnimating = false;
     
     // === ANIMAÇÃO DE LOADING ===
-    // Cria o overlay de loading
     const loader = document.createElement('div');
     loader.className = 'page-loader';
     loader.innerHTML = `
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.body.appendChild(loader);
     
-    // Esconde o loader após a página carregar
     window.addEventListener('load', function() {
         setTimeout(() => {
             loader.classList.add('loader-hidden');
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     });
     
-    // Fallback caso o load demore muito
     setTimeout(() => {
         if (loader && !loader.classList.contains('loader-hidden')) {
             loader.classList.add('loader-hidden');
@@ -89,13 +86,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 100);
     
-    // Placeholder para botões sem link
-    const placeholderBtns = document.querySelectorAll('[id^="btn-proposta"], [id^="btn-plano"], [id^="booking-link"]');
-    placeholderBtns.forEach(btn => {
+    // Placeholder para botão de agendamento
+    const bookingBtns = document.querySelectorAll('[id^="booking-link"]');
+    bookingBtns.forEach(btn => {
         btn.addEventListener('click', function(e) {
             if (this.getAttribute('href') === '#') {
                 e.preventDefault();
-                alert('Link em breve');
+                alert('Link de agendamento em breve');
             }
         });
     });
