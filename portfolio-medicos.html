@@ -13,9 +13,9 @@
             box-sizing: border-box;
         }
         body {
-            background: #021F33;
+            background: #FAF9F8;
             font-family: 'Inter', sans-serif;
-            color: #FFFFFF;
+            color: #021F33;
             min-height: 100vh;
             padding: 40px 20px;
         }
@@ -31,35 +31,35 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: rgba(255,255,255,0.6);
+            color: rgba(2, 31, 51, 0.5);
             text-decoration: none;
             margin-bottom: 20px;
             transition: all 0.3s;
         }
         .back-link:hover {
-            color: #FFFFFF;
+            color: #021F33;
         }
         h1 {
             font-size: 32px;
             font-weight: 500;
             margin-bottom: 12px;
             letter-spacing: -0.3px;
+            color: #021F33;
         }
         .subtitle {
             font-size: 16px;
-            color: rgba(255,255,255,0.6);
+            color: rgba(2, 31, 51, 0.6);
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.5;
         }
         .subtitle a {
-            color: rgba(255,255,255,0.8);
+            color: #021F33;
             text-decoration: none;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
+            border-bottom: 1px solid rgba(2, 31, 51, 0.3);
         }
         .subtitle a:hover {
-            color: #FFFFFF;
-            border-bottom-color: rgba(255,255,255,0.6);
+            border-bottom-color: #021F33;
         }
         .grid {
             display: grid;
@@ -68,21 +68,22 @@
             margin: 40px 0;
         }
         .card {
-            background: rgba(255,255,255,0.03);
+            background: rgba(2, 31, 51, 0.02);
             border-radius: 20px;
             overflow: hidden;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(2, 31, 51, 0.08);
         }
         .card:hover {
             transform: translateY(-4px);
-            border-color: rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.05);
+            border-color: rgba(2, 31, 51, 0.15);
+            background: rgba(2, 31, 51, 0.04);
         }
         .card-icon {
             padding: 28px 24px 16px 24px;
             font-size: 32px;
-            color: rgba(255,255,255,0.5);
+            color: #021F33;
+            opacity: 0.6;
         }
         .card-content {
             padding: 0 24px 24px 24px;
@@ -92,18 +93,19 @@
             font-weight: 500;
             margin-bottom: 10px;
             letter-spacing: -0.2px;
+            color: #021F33;
         }
         .card-content p {
             font-size: 13px;
-            color: rgba(255,255,255,0.55);
+            color: rgba(2, 31, 51, 0.6);
             line-height: 1.5;
         }
         .procedure-tag {
             display: inline-block;
             margin-top: 12px;
             font-size: 11px;
-            color: rgba(255,255,255,0.4);
-            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(2, 31, 51, 0.45);
+            border-top: 1px solid rgba(2, 31, 51, 0.1);
             padding-top: 12px;
             width: 100%;
         }
@@ -112,16 +114,43 @@
             font-weight: 500;
             margin: 40px 0 20px 0;
             letter-spacing: -0.2px;
-            border-left: 2px solid rgba(255,255,255,0.3);
+            border-left: 2px solid #021F33;
             padding-left: 16px;
+            color: #021F33;
         }
         .footer {
             text-align: center;
             margin-top: 50px;
             padding-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.08);
+            border-top: 1px solid rgba(2, 31, 51, 0.08);
             font-size: 12px;
-            color: rgba(255,255,255,0.4);
+            color: rgba(2, 31, 51, 0.4);
+        }
+        .credential-box {
+            margin: 40px 0 20px;
+            padding: 24px;
+            background: rgba(2, 31, 51, 0.02);
+            border-radius: 20px;
+            border: 1px solid rgba(2, 31, 51, 0.06);
+            text-align: center;
+        }
+        .credential-box p {
+            color: rgba(2, 31, 51, 0.6);
+        }
+        .credential-box .specialty {
+            font-size: 12px;
+            color: rgba(2, 31, 51, 0.5);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        .credential-box .crm {
+            font-size: 13px;
+            color: #021F33;
+        }
+        .credential-box .exp {
+            font-size: 12px;
+            color: rgba(2, 31, 51, 0.45);
+            margin-top: 12px;
         }
         @media (max-width: 768px) {
             h1 { font-size: 26px; }
@@ -230,10 +259,10 @@
             </div>
         </div>
 
-        <div style="margin: 40px 0 20px; padding: 24px; background: rgba(255,255,255,0.02); border-radius: 20px; border: 1px solid rgba(255,255,255,0.06); text-align: center;">
-            <p style="font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 8px; letter-spacing: 0.5px;">ESPECIALISTA PELA SBCP | CFM</p>
-            <p style="font-size: 13px; color: rgba(255,255,255,0.7);">CRM-SP 136.535 | RQE 114.388</p>
-            <p style="font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 12px;">+10 anos de experiência | Residência em Cirurgia Geral e Plástica</p>
+        <div class="credential-box">
+            <p class="specialty">ESPECIALISTA PELA SBCP | CFM</p>
+            <p class="crm">CRM-SP 136.535 | RQE 114.388</p>
+            <p class="exp">+10 anos de experiência | Residência em Cirurgia Geral e Plástica</p>
         </div>
 
         <div class="footer">
