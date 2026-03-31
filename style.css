@@ -195,22 +195,13 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
-    border: 1px solid rgba(2, 31, 51, 0.25);
-    border-radius: 40px;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     transition: all 0.2s ease;
     height: 48px;
     width: 100%;
-    color: #021F33;
-}
-
-.link-button:hover {
-    border-color: #021F33;
-    background: rgba(2, 31, 51, 0.03);
-    transform: translateY(-1px);
+    border-radius: 40px;
 }
 
 .link-button-content {
@@ -222,7 +213,6 @@ body::before {
 
 .link-button i {
     font-size: 15px;
-    color: rgba(2, 31, 51, 0.7);
 }
 
 .button-text {
@@ -230,18 +220,65 @@ body::before {
     font-weight: 500;
 }
 
-/* BOTÃO DE CONTATO - WHATSAPP */
+/* BOTÕES PRIMÁRIOS - FUNDO AZUL COM TEXTO BRANCO */
+.primary-button {
+    background: #021F33;
+    border: none;
+    color: #FFFFFF;
+}
+
+.primary-button:hover {
+    background: #023048;
+    transform: translateY(-2px);
+    border: none;
+    box-shadow: 0 4px 12px rgba(2, 31, 51, 0.2);
+}
+
+.primary-button i {
+    color: #FFFFFF;
+}
+
+/* BOTÃO DE CONTATO - WHATSAPP OTIMIZADO */
 .contact-button {
-    border-color: rgba(37, 211, 102, 0.4);
+    background: rgba(37, 211, 102, 0.08);
+    border: 1.5px solid #25D366;
+    color: #021F33;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+    height: 48px;
+}
+
+.contact-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(37, 211, 102, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.contact-button:hover::before {
+    left: 100%;
 }
 
 .contact-button:hover {
+    background: rgba(37, 211, 102, 0.15);
+    transform: translateY(-2px);
     border-color: #25D366;
-    background: rgba(37, 211, 102, 0.05);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 .contact-button i {
     color: #25D366;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.contact-button:hover i {
+    transform: scale(1.05);
 }
 
 /* FOOTER PADRONIZADO */
@@ -374,6 +411,14 @@ body::before {
         font-size: 10px;
         gap: 6px;
     }
+
+    .contact-button {
+        height: 44px;
+    }
+    
+    .contact-button i {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -388,5 +433,9 @@ body::before {
     
     .link-button i {
         font-size: 13px;
+    }
+
+    .contact-button i {
+        font-size: 15px;
     }
 }

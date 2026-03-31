@@ -181,7 +181,7 @@
             margin-bottom: 24px;
         }
         
-        /* Galeria de imagens - FORMATO ORIGINAL */
+        /* Galeria de imagens - COM ARREDONDAMENTO COMPLETO */
         .image-gallery {
             display: flex;
             gap: 16px;
@@ -192,11 +192,25 @@
         .gallery-item {
             flex: 1;
             min-width: 140px;
-            background: #f5f3f0;
             border-radius: 20px;
             overflow: hidden;
             cursor: pointer;
             transition: all 0.3s ease;
+            background: transparent;
+            line-height: 0;
+            position: relative;
+        }
+        
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            pointer-events: none;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.02);
         }
         
         .gallery-item:hover {
@@ -209,6 +223,7 @@
             height: auto;
             display: block;
             transition: transform 0.3s ease;
+            border-radius: 20px;
         }
         
         .gallery-item:hover img {
@@ -402,7 +417,7 @@
             <div class="partner">
                 <img src="images/perfil2.png" alt="Hangar Creative Hub" class="hangar-logo">
                 <div class="partner-name">Hangar Creative Hub</div>
-                <div class="partner-title">estratégia · criação · performance</div>
+                <div class="partner-title">estratégia · création · performance</div>
             </div>
             <span class="divider-symbol">×</span>
             <div class="partner">
@@ -416,7 +431,7 @@
         
         <!-- TEXTO DE ABERTURA -->
         <div class="intro-text">
-            <p>A Hangar nasce com um olhar contemporâneo sobre presença, narrativa e percepção. Mais do que produzir conteúdo, nosso papel é construir relevância, autoridade e memória de marca.</p>
+            <p>A Hangar Comunicação nasce com um olhar contemporâneo sobre presença, narrativa e percepção. Mais do que produzir conteúdo, nosso papel é construir relevância, autoridade e memória de marca.</p>
             <p>Ao nos conectarmos com a Paoliello Clinic, enxergamos um potencial que vai além da comunicação tradicional: existe aqui uma história forte, uma estética própria e uma autoridade que merece ser percebida com a mesma precisão com que é construída no atendimento.</p>
             <p>Nosso objetivo é atuar de forma estratégica e integrada, elevando a percepção da marca por meio de uma comunicação refinada, sensível e inteligente.</p>
         </div>
@@ -446,15 +461,26 @@
             </div>
         </div>
         
-        <!-- PILAR 2: Design estratégico - SEM IMAGENS -->
+        <!-- PILAR 2: DESIGN SOCIAL MEDIA COM IMAGENS (foto4, foto5, foto6) -->
         <div class="pilar-card">
             <div class="pilar-header">
                 <div class="pilar-icon">
                     <i class="fas fa-palette"></i>
                 </div>
-                <h3>Design estratégico</h3>
+                <h3>Design Social Media</h3>
             </div>
             <p>Direcionamento estético alinhado à sofisticação da marca, garantindo consistência visual e reconhecimento.</p>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="images/foto4.jpeg" alt="Foto 4" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+4'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/foto5.jpeg" alt="Foto 5" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+5'">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/foto6.jpeg" alt="Foto 6" onerror="this.src='https://placehold.co/600x450/e9ecef/1a2a3a?text=Foto+6'">
+                </div>
+            </div>
         </div>
         
         <!-- PILAR 3: Fotografia COM IMAGENS -->

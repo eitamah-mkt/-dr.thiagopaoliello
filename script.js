@@ -85,15 +85,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 500);
         }
     }, 100);
-    
-    // Placeholder para botão de agendamento
-    const bookingBtns = document.querySelectorAll('[id^="booking-link"]');
-    bookingBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            if (this.getAttribute('href') === '#') {
-                e.preventDefault();
-                alert('Link de agendamento em breve');
-            }
-        });
-    });
 });
